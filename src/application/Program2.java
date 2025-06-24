@@ -14,7 +14,12 @@ public class Program2 {
 		Department dep = depDao.findById(3);
 		System.out.println(dep);
 				
-
+		System.out.println("\n=== TEST 2: department insert ===");
+		Department newDep = new Department(null, "Automobiles");
+		depDao.insert(newDep);
+		System.out.println("Inserted! New Id = " + newDep.getId());
+		
+		
 	}
 
 }
